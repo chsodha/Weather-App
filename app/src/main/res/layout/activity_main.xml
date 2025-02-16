@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sun3"
+    tools:context=".MainActivity">
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/search_background"
+        android:queryHint="Search for a City"
+        android:theme="@style/CustomSearchView"
+        android:searchIcon="@drawable/baseline_search_24"
+        android:iconifiedByDefault="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:src="@drawable/baseline_location_on_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/cityName"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:text="City Name"
+        android:textColor="#000000"
+        android:textSize="17dp"
+        android:paddingTop="4dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+
+    <TextView
+        android:id="@+id/today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Today"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@id/imageView2"
+        app:layout_constraintTop_toBottomOf="@id/imageView2"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="00:00 °C"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/today"
+        app:layout_constraintTop_toBottomOf="@id/today" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAV"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/today"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/animation_sun2" />
+
+    <TextView
+        android:id="@+id/txtSunny"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUNNY"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/lottieAV"
+        app:layout_constraintStart_toStartOf="@+id/today" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/txtMax"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textColor="#000000"-->
+<!--        android:textSize="16sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/txtSunny"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/temperature"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/temperature"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/temperature" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/txtMin"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textColor="#000000"-->
+<!--        android:textSize="16sp"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/txtMax"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/lottieAV" />-->
+
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Friday"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="31 January 2025"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/day"
+        app:layout_constraintStart_toStartOf="@+id/day"
+        app:layout_constraintTop_toBottomOf="@id/day"/>
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/box_background"
+        app:layout_constraintBottom_toTopOf="@id/designBy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintWidth_percent="0.21"
+                app:layout_constraintHeight_percent="0.4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:background="@drawable/box_background">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/humidity2"/>
+
+                <TextView
+                    android:id="@+id/humidity"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:text="TextView"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:text="Humidity"
+                    android:textAlignment="center"
+                    android:textColor="#000000"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintWidth_percent="0.21"
+                app:layout_constraintHeight_percent="0.4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/linearLayout1"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:background="@drawable/box_background">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/wind2"/>
+
+                <TextView
+                    android:id="@+id/windspeed"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:text="TextView"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:text="WindSpeed"
+                    android:textSize="11dp"
+                    android:textAlignment="center"
+                    android:textColor="#000000"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintWidth_percent="0.21"
+                app:layout_constraintHeight_percent="0.4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/linearLayout2"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:background="@drawable/box_background">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/situation2"/>
+
+                <TextView
+                    android:id="@+id/sunnyCloud"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:text="TextView"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:text="Condition"
+                    android:textSize="13dp"
+                    android:textAlignment="center"
+                    android:textColor="#000000"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintWidth_percent="0.21"
+                app:layout_constraintHeight_percent="0.4"
+                app:layout_constraintTop_toBottomOf="@id/linearLayout1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout5"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:background="@drawable/box_background">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/sunset"/>
+
+                <TextView
+                    android:id="@+id/sunrise_text_view"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:text="TextView"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:text="Sunrise"
+                    android:textAlignment="center"
+                    android:textColor="#000000"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintWidth_percent="0.21"
+                app:layout_constraintHeight_percent="0.4"
+                app:layout_constraintTop_toBottomOf="@id/linearLayout2"
+                app:layout_constraintStart_toEndOf="@id/linearLayout4"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout6"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:background="@drawable/box_background">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/sunset"/>
+
+                <TextView
+                    android:id="@+id/sunset_text_view"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:text="TextView"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:text="Sunset"
+                    android:textAlignment="center"
+                    android:textColor="#000000"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintWidth_percent="0.21"
+                app:layout_constraintHeight_percent="0.4"
+                app:layout_constraintTop_toBottomOf="@id/linearLayout3"
+                app:layout_constraintStart_toEndOf="@id/linearLayout5"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:background="@drawable/box_background">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/sea"/>
+
+                <TextView
+                    android:id="@+id/sea"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:text="TextView"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:text="Sea"
+                    android:textAlignment="center"
+                    android:textColor="#000000"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/designBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="          DESIGN BY \n Chhatrapalsinh Sodha"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
