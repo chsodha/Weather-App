@@ -28,8 +28,6 @@ A simple Android weather application built using **Java** and **XML** in **Andro
 
 ![Screenshot_2025-03-04-22-14-12-69_fcadabc4ac635b725956ef7725c1dc64](https://github.com/user-attachments/assets/bc14e803-aa1e-4bd2-9fe8-edffbe34708b)
 
-## 📝 Permissions
-<uses-permission android:name="android.permission.INTERNET"/>
 
 ## 🧠 What I Learned
 
