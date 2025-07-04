@@ -1,7 +1,7 @@
 # Weather-App
 A simple Android weather application built using **Java** and **XML** in **Android Studio**. The app fetches real-time weather data using a public weather API and displays current temperature, location, weather conditions, and more.
 
-📱 Features
+## 📱 Features
 
 - 🔍 Search weather by city name
 - 🌡️ Display current temperature, weather condition, and location
@@ -9,7 +9,7 @@ A simple Android weather application built using **Java** and **XML** in **Andro
 - 📡 Fetches live data from weather API
 - 🧭 Clean and responsive UI with XML layout
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 - **Language**: Java  
 - **UI Design**: XML  
@@ -18,7 +18,7 @@ A simple Android weather application built using **Java** and **XML** in **Andro
 - **Network Library**: Retrofit
 - **Other**: Internet permission in 'AndroidManifest.xml'
 
-📷 Screenshots
+## 📷 Screenshots
 
 ![Screenshot_2025-03-04-22-13-51-98_fcadabc4ac635b725956ef7725c1dc64](https://github.com/user-attachments/assets/dddd2978-91f4-4634-a8fd-757aa3c869fb)
 
@@ -28,17 +28,22 @@ A simple Android weather application built using **Java** and **XML** in **Andro
 
 ![Screenshot_2025-03-04-22-14-12-69_fcadabc4ac635b725956ef7725c1dc64](https://github.com/user-attachments/assets/bc14e803-aa1e-4bd2-9fe8-edffbe34708b)
 
-📝 Permissions
+## 📝 Permissions
 <uses-permission android:name="android.permission.INTERNET"/>
 
-🧠 What I Learned
-Working with APIs in Android
-Parsing JSON data
-Designing with XML
-Managing Async Tasks / Threads
-Improving UI/UX skills
-Debugging and optimizing performance
+## 🧠 What I Learned
 
-🙋‍♂️ Author
-Chhatrapalsinh Sodha
-📧 chsodha003@gmail.com
+- Working with **APIs** in Android  
+- Parsing **JSON** data  
+- Designing with **XML**  
+- Managing **Async Tasks / Threads**  
+- Improving **UI/UX** skills  
+- Debugging and optimizing performance  
+
+
+## 🙋‍♂️ Author
+
+**Chhatrapalsinh Sodha**  
+📧 chsodha003@gmail.com  
+🌐 **GitHub** - (https://github.com/chsodha)
+
